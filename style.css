@@ -1,0 +1,19 @@
+body {
+  background-color: rgb(135, 113, 113);
+  color: white;
+  min-height: 100vh;
+  margin: 0;
+}
+h1 {
+  text-align: center;
+}
+.container {
+  background-color: rgb(157, 101, 29);
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container > .btn {
+  background-color: blue;
+}
