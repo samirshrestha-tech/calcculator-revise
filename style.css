@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(135, 113, 113);
+  background-color: rgb(193, 177, 105);
   color: white;
   min-height: 100vh;
   margin: 0;
@@ -8,12 +8,99 @@ h1 {
   text-align: center;
 }
 .container {
-  background-color: rgb(157, 101, 29);
-  min-height: 70vh;
+  min-width: 70vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.container > .btn {
-  background-color: blue;
+.container > .buttons {
+  background-color: rgb(95, 95, 151);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-areas:
+    "display display display display"
+    "ac clear percent divide"
+    "seven eight nine multi"
+    "four five six min"
+    "one two three ad"
+    "null null do equal";
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+.btn {
+  background: black;
+  padding: 1.5rem;
+  text-align: center;
+  margin: 1.2rem 1.1rem;
+  border-radius: 50%;
+  font-size: 20px;
+}
+.display {
+  grid-area: display;
+  border-radius: 5px;
+}
+.btn-ac {
+  grid-area: ac;
+}
+.btn-clear {
+  grid-area: clear;
+}
+
+.btn-0 {
+  grid-area: null;
+  border-radius: 20px;
+}
+.btn-1 {
+  grid-area: one;
+}
+.btn-2 {
+  grid-area: two;
+}
+.btn-3 {
+  grid-area: three;
+}
+.btn-4 {
+  grid-area: four;
+}
+.btn-5 {
+  grid-area: five;
+}
+.btn-6 {
+  grid-area: six;
+}
+.btn-7 {
+  grid-area: seven;
+}
+.btn-8 {
+  grid-area: eight;
+}
+.btn-9 {
+  grid-area: nine;
+}
+.btn-equal {
+  grid-area: equal;
+  background: rgba(234, 154, 5, 0.704);
+}
+.btn-dot {
+  grid-area: do;
+}
+.btn-add {
+  grid-area: ad;
+  background: rgba(234, 154, 5, 0.704);
+}
+.btn-minus {
+  grid-area: min;
+  background: rgba(234, 154, 5, 0.704);
+}
+.btn-multi {
+  grid-area: multi;
+  background: rgba(234, 154, 5, 0.704);
+}
+.btn-divide {
+  grid-area: divide;
+  background: rgba(234, 154, 5, 0.704);
+}
+.btn-percent {
+  grid-area: percent;
 }
