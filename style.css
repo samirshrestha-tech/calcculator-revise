@@ -39,6 +39,8 @@ h1 {
 .display {
   grid-area: display;
   border-radius: 5px;
+  display: flex;
+  justify-content: end;
 }
 .btn-ac {
   grid-area: ac;
