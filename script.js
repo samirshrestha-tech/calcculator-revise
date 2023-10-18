@@ -35,7 +35,20 @@ allBtns.forEach((btn) => {
       }
       return total();
     }
-    // this if condition checks if the last char is operator and if it is then it doesn't allow other operators to be pressed consecutively.
+    // this if condition checks if the last char is operator and if it is then it doesn't allow other operators to be pressed consecutively. heere the approach is simple, we check if the val is equal to the operators and if it is then we assign it to a string of lastOperator, then we define a lastchar after the operator which we check also for if the lastChar of the string and if the operator is there then we just take slice and take until the last char for the mathematical operation.
+    if (operators.includes(val)) {
+      lastOperator = val;
+      const lastChar = strToDisplay[strToDisplay.length - 1];
+
+      if (operators.includes(lastChar)) {
+        strToDisplay = strToDisplay.slice(0, -1);
+      }
+    }
+    // this if statement returns only when both the string shouldnot have any value at the beginning and the initial value is operator then it ends the code execution there.
+    // in other words, it doesn't allow the operators to be used in the beginning of the calculation.
+    if (strToDisplay === "" && operators.includes(val)) {
+      return;
+    }
 
     strToDisplay += val;
     display(strToDisplay);
