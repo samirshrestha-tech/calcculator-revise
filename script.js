@@ -49,6 +49,14 @@ allBtns.forEach((btn) => {
     if (strToDisplay === "" && operators.includes(val)) {
       return;
     }
+    // here we are checking if the val is ".", and we are introducing the lastVal variable so to check if the lastVal variable includes ".", we return from there and the rest of the code executes so that the decimal point is not repeated twice
+    if (val === ".") {
+      const lastVal = strToDisplay[strToDisplay.length - 1];
+
+      if (lastVal.includes(val)) {
+        return;
+      }
+    }
 
     strToDisplay += val;
     display(strToDisplay);
