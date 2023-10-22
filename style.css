@@ -47,6 +47,7 @@ h1 {
   text-align: center;
   margin: 1.2rem 1.1rem;
   font-size: 20px;
+  /* animation: shake 0.5s linear 3; */
 }
 .btn-ac {
   grid-area: ac;
@@ -111,4 +112,20 @@ h1 {
 }
 .btn-percent {
   grid-area: percent;
+}
+
+@keyframes shake {
+  0% {
+    position: relative;
+    right: 5px;
+  }
+  50% {
+    position: relative;
+    right: 10px;
+  }
+
+  100% {
+    position: relative;
+    right: 5px;
+  }
 }

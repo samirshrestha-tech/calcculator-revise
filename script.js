@@ -4,8 +4,9 @@ const allBtns = [...document.getElementsByClassName("btn")];
 const operators = ["+", "-", "*", "/", "%"];
 let strToDisplay = "";
 let lastOperator = "";
-
 displaElm.style.color = "red";
+displaElm.style.animationDuration = " 2s";
+const sound = new Audio("aaa.wav");
 
 const display = (str) => {
   displaElm.innerHTML = str || "0.0";
@@ -15,6 +16,7 @@ const display = (str) => {
 allBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     const val = btn.innerText;
+
     if (val === "AC") {
       strToDisplay = "";
       display(strToDisplay);
@@ -64,7 +66,24 @@ allBtns.forEach((btn) => {
 });
 
 const total = () => {
-  const ttl = eval(strToDisplay);
+  const ttl = eval(strToDisplay) + random();
+  const total = eval(strToDisplay);
+  if (ttl > total) {
+    displaElm.style.color = "blue";
+    displaElm.style.animation = "shake 0.5s linear 3";
+    sound.play();
+  } else {
+    displaElm.style.color = "red";
+  }
+
   display(ttl);
+
   strToDisplay = ttl.toString();
+};
+
+const random = () => {
+  const randVal = Math.floor(Math.random() * 10);
+  console.log(randVal);
+
+  return randVal ? randVal > 3 : 0;
 };
