@@ -114,6 +114,12 @@ h1 {
   grid-area: percent;
 }
 
+/* adding a classlist for the animation */
+
+.prank {
+  animation: shake 0.5s ease-in;
+}
+
 @keyframes shake {
   0% {
     position: relative;

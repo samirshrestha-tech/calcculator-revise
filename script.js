@@ -67,11 +67,13 @@ allBtns.forEach((btn) => {
 
 const total = () => {
   const ttl = eval(strToDisplay) + random();
-  const total = eval(strToDisplay);
-  if (ttl > total) {
-    displaElm.style.color = "blue";
-    displaElm.style.animation = "shake 0.5s linear 3";
+  console.log(ttl);
+  const totl = eval(strToDisplay);
+  console.log(totl);
+  if (ttl > totl) {
     sound.play();
+    displaElm.style.color = "blue";
+    displaElm.classList.add("prank");
   } else {
     displaElm.style.color = "red";
   }
@@ -83,7 +85,7 @@ const total = () => {
 
 const random = () => {
   const randVal = Math.floor(Math.random() * 10);
-  console.log(randVal);
+  // console.log(randVal);
 
   return randVal ? randVal > 3 : 0;
 };
